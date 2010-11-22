@@ -6,6 +6,6 @@
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
 
-["Designer","Developer","SEO expert"].each do |category|
+["Designer","Developer"].each do |category|
   Category.create(:name => category)
 end

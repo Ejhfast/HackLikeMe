@@ -6,9 +6,9 @@ class Authorization < ActiveRecord::Base
   def self.find_from_hash(hash)
     auth = find_by_provider_and_uid(hash['provider'], hash['uid'])
     # update token / secret
-    auth.token = hash['credentials']['token']
-    auth.secret = hash['credentials']['secret']
-    auth.save
+    #auth.token = hash['credentials']['token']
+    #auth.secret = hash['credentials']['secret']
+    #auth.save
     return auth
   end
   

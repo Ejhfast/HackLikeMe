@@ -30,8 +30,8 @@ class ApplicationController < ActionController::Base
   
   def get_client token, secret
     TwitterOAuth::Client.new(
-      :consumer_key => "TLC5QDn0kuXJFl41weM96Q",
-      :consumer_secret => "KTb9bIHeAcrrOIjF2g96huSpMQaWUgPIEj1qOB0wOQQ",
+      :consumer_key => "u1rKrNjTownQZO2KfP4yZw",
+      :consumer_secret => "gNIh6myFIjunLGSYLafcu12lSb3fUnqFGIZ71IOw",
       :token => token,
       :secret => secret)
   end
