@@ -19,6 +19,16 @@
 			<h1>Hack Like Me</h1>
 		</div>
 	</header>
+	<% if flash[:error] %>
+		<div id="subheading">
+			<h2>
+				Wait a moment!		
+			</h2>
+		</div>
+		<div id="quip">
+			<p> <%= flash[:error] %></p>
+		</div>
+	<% end %>
 
 <%= yield %>
 

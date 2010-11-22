@@ -24,6 +24,7 @@ class ApplicationController < ActionController::Base
   
   def login_required
     if not current_user
+      flash[:error] = "Need to Log In First!"
       redirect_to projects_url
     end
   end

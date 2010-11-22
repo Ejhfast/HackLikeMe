@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  before_filter :login_required, :except => :index
+  before_filter :login_required, :except => [:index, :show]
   
   def index
     if params[:category]
