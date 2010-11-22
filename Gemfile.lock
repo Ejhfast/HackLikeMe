@@ -122,6 +122,7 @@ GEM
       mime-types (>= 1.16)
       oauth (>= 0.4.1)
     tzinfo (0.3.23)
+    will_paginate (3.0.pre2)
 
 PLATFORMS
   ruby
@@ -132,3 +133,4 @@ DEPENDENCIES
   rails (= 3.0.2)
   sqlite3-ruby
   twitter_oauth
+  will_paginate (~> 3.0.pre2)

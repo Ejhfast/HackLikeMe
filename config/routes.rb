@@ -1,14 +1,12 @@
 TwitTest::Application.routes.draw do
     
+  resources :projects
+
   match "landing/login", :to => 'landing#login', :as => :login
 
   match 'auth/:provider/callback', :to => 'sessions#create'
   match 'sign_out', :to => 'sessions#destroy'
   
-  match 'analyze/freq/:count', :to => 'analyze#freq'
-  match 'analyze/freq', :to => 'analyze#freq'
-  match 'analyze/ego/:count', :to => 'analyze#ego'
-  match 'analyze/ego', :to => 'analyze#ego'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

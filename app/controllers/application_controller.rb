@@ -24,7 +24,7 @@ class ApplicationController < ActionController::Base
   
   def login_required
     if not current_user
-      redirect_to login_url
+      redirect_to projects_url
     end
   end
   
@@ -38,11 +38,35 @@ class ApplicationController < ActionController::Base
 
   def freq_count doc, size
     fh = Hash.new(0)
-    words = doc.split(' ').select{|w| w.size > size}
+    words = doc.split(' ').select{|w| w.size > size}.map{|w| w.chomp.downcase}
     words.each{ |w|
       fh[w] = fh[w] + 1
     }
     return fh
+  end
+  
+  def do_semantic docs, freqs
+    semantic_hash = Hash.new
+    docs.each do |tweet|
+      words = tweet.split(' ').map{|x| x.chomp.downcase}
+      words.each do |w1|
+        words.each do |w2|
+          if not semantic_hash[w1].nil?
+            semantic_hash[w1][w2] = semantic_hash[w1][w2] + (1.0 / freqs[w2].to_f)
+          else
+            semantic_hash[w1] = Hash.new(0.0)
+            semantic_hash[w1][w2] = (1.0 / freqs[w2].to_f)
+          end
+        end
+      end
+    end
+    return semantic_hash
+  end
+  
+  
+  def ego_words
+    ["I", "We", "my", "myself", "checking in", "facebook", "check in", "log in",
+      "breakfast", "lunch", "dinner", "I'm"].map{|x| x.downcase}
   end
 
 end

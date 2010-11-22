@@ -11,6 +11,8 @@ gem 'omniauth'
 gem 'twitter_oauth'
 # Use unicorn as the web server
 # gem 'unicorn'
+gem "will_paginate", "~> 3.0.pre2"
+
 
 # Deploy with Capistrano
 # gem 'capistrano'

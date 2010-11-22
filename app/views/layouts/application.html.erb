@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TwitTest</title>
+  <title>HackLikeMe</title>
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
 <body>
+	<header>
+		<div id="login">
+		<% if current_user %>
+			<%= link_to 'Log Out', sign_out_path %>
+		<% else %>
+			<%= link_to 'Log In', '/auth/twitter' %>
+		<% end  %>
+		</div>
+		<div id="title">
+			<h1>Hack Like Me</h1>
+		</div>
+	</header>
 
 <%= yield %>
 

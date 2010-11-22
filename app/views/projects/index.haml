@@ -1,0 +1,38 @@
+#subheading
+	%h2 Recently posted projects
+%ul
+	- @projects.each do |proj|
+		%li= link_to proj.name, project_path(proj)
+- if @projects.empty?
+	#quip
+		%p
+			No results
+#quip
+	= will_paginate @projects
+#subheading
+	%h2 
+		You can filter projects
+#quip
+	%p
+		Looking for a
+		= link_to 'designer', '?category=1'
+		or a
+		= link_to 'developer.', '?category=2'
+	- if @filtered
+		%p
+			= link_to 'Reset', projects_path
+			the filter
+
+- if current_user
+	#subheading
+		%h2 Or post a new project
+	#quip
+		%p Provide a project name, an optional website, and the project's description.
+	= render 'form'
+- else
+	#subheading
+		%h2 Want to Post?
+	#quip
+		%p 
+			It's quite easy! You can sign in 
+			=link_to 'with Twitter.', '/auth/twitter'

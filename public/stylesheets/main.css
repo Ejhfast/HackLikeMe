@@ -1,0 +1,78 @@
+/* @override http://localhost:3000/stylesheets/main.css?1290460449 */
+
+@import url('http://fonts.googleapis.com/css?family=Droid+Sans');
+@import url('http://fonts.googleapis.com/css?family=Tinos&subset=latin');
+body{
+	font-family: "Tinos";
+}
+header{
+	width:800px;
+	margin: 0px auto;
+}
+h1, h2, h3 {
+	color: #2f2f2f;
+	font-family: "Droid Sans";
+	padding: 0px;
+	margin: 0px;
+}
+p{
+	font-family: "Tinos";
+	font-size: 25px;
+	
+}
+#title{
+	margin: 0px auto;
+}
+#title h1{
+	color: black;
+	letter-spacing: -7px;
+	font-size: 105px;
+	text-align: center;
+	margin: 0px 0px 40px 0px;
+}
+
+#login{
+}
+h2{
+	font-size:40px	
+}
+ul{
+	width: 400px;
+	margin: 0px auto 40px auto;
+	list-style-type: decimal;
+}
+
+li{
+	font-size: 30px;
+	line-height: 40px;
+}
+#subheading{
+	width: 500px;
+	margin: 0px auto;
+}
+#subheading h2{
+	margin: 0px 0px 40px 0px;
+}
+#quip{
+	width: 450px;
+	margin: 0px auto;
+	text-align: justify;
+	margin: 0px auto 50px auto;
+}
+form{
+	font-family: "helvetica";
+	width: 450px;
+	margin: 0px auto 40px auto;
+	direction: ltr;
+	font-variant: small-caps;
+}
+input{
+	height: 20px;
+	margin: 0px 0px 5px 0px;
+}
+input, textarea{
+	font-size: 15px;
+}
+#bottom_nav{
+	text-align: center;
+}

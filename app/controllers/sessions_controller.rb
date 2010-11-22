@@ -1,7 +1,5 @@
 class SessionsController < ApplicationController
-  
-  
-  
+
   def create
     auth = request.env['omniauth.auth']
     unless @auth = Authorization.find_from_hash(auth)
@@ -9,12 +7,12 @@ class SessionsController < ApplicationController
     end
     self.current_user = @auth.user
     
-    render :text => "Logged In!"
+    redirect_to projects_path
   end
   
   def destroy
     sign_out
-    render :text => "Logged Out!"
+    redirect_to projects_path
   end
   
 end

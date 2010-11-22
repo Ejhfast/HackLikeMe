@@ -1,0 +1,22 @@
+#subheading
+	%h2 
+		= @project.name
+#quip
+	%p
+		= @project.description
+
+- if @project.url
+	#quip
+		%p
+			= link_to @project.url, @project.url
+- if @project.user_id == current_user.id
+	#subheading 
+		%h2 Modify Project
+	#quip
+		%p
+			Either
+			= link_to 'edit', edit_project_path(@project)
+			or
+			= link_to 'delete', project_path(@project), :method => :delete
+
+= render 'back'
