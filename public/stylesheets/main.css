@@ -43,10 +43,14 @@ p{
 	font-weight: normal;
 	font-style: normal;
 	color: white;
-	clear: both;
+}
+#login img{
+	float: right;
+	clear:none;	
+	padding:5px;
 }
 h2{
-	font-size:40px	
+	font-size:40px;
 }
 ul{
 	width: 400px;
