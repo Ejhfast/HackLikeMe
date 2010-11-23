@@ -31,13 +31,19 @@ p{
 	text-align: center;
 	margin: 0px 0px 40px 0px;
 }
-
+#login{
+	width: 700px;
+	margin: 0px auto;
+}
 #login a{
-	font-variant: small-caps;
+	margin-top: 10px;
 	font-size: 20px;
+	float: right;
 	text-decoration: none;
 	font-weight: normal;
 	font-style: normal;
+	color: white;
+	clear: both;
 }
 h2{
 	font-size:40px	

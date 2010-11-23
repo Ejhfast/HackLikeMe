@@ -7,15 +7,16 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
+	<div id="login">
+	<% if current_user %>
+		<%= link_to '[Log Out]', sign_out_path %>
+	<% else %>
+		<%= link_to '[Log In]', '/auth/twitter' %>
+	<% end  %>
+	</div>
+	<br />
 	<div id="content">
 	<header>
-		<div id="login">
-		<% if current_user %>
-			<%= link_to '[Log Out]', sign_out_path %>
-		<% else %>
-			<%= link_to '[Log In]', '/auth/twitter' %>
-		<% end  %>
-		</div>
 		<div id="title">
 			<h1>Hack Like Me</h1>
 		</div>
